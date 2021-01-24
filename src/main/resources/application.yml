@@ -1,0 +1,4 @@
+aws.dynamodb.endpoint: http://localhost:8000
+aws.region: us-west-1
+aws.accessKeyId: randomkey
+aws.secretKey: randomkey
