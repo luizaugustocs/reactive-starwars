@@ -17,5 +17,5 @@ jobs:
       - name: Package
         uses: actions/upload-artifact@v2
         with:
-          name: Jar
-          path: build/libs
+          name: reactive-starwars.jar
+          path: build/libs/reactive-starwars*
