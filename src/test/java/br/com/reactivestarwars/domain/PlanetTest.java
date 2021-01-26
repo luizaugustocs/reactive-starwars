@@ -24,10 +24,10 @@ public class PlanetTest {
         Planet result = Planet.fromSWApi(node);
 
         assertNotNull(result);
-        assertEquals(result.getId(), "1");
-        assertEquals(result.getName(), "Tatooine");
-        assertEquals(result.getTerrain(), "desert");
-        assertEquals(result.getClimate(), "arid");
+        assertEquals("1", result.getId());
+        assertEquals("Tatooine", result.getName());
+        assertEquals("desert", result.getTerrain());
+        assertEquals("arid", result.getClimate());
 
     }
     @Test
@@ -45,10 +45,9 @@ public class PlanetTest {
 
         assertNotNull(result);
         assertNull(result.getId());
-        assertEquals(result.getName(), "Tatooine");
-        assertEquals(result.getTerrain(), "desert");
-        assertEquals(result.getClimate(), "arid");
-
+        assertEquals("Tatooine", result.getName());
+        assertEquals("desert", result.getTerrain());
+        assertEquals("arid", result.getClimate());
     }
 
 }

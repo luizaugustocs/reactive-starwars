@@ -16,7 +16,6 @@ import software.amazon.awssdk.services.dynamodb.model.Projection;
 import software.amazon.awssdk.services.dynamodb.model.ProjectionType;
 
 import java.util.UUID;
-import java.util.concurrent.CompletableFuture;
 
 @Component
 public class PlanetRepository {

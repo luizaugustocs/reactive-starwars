@@ -3,6 +3,7 @@ package br.com.reactivestarwars.repository;
 import br.com.reactivestarwars.domain.Planet;
 import com.fasterxml.jackson.databind.node.ArrayNode;
 import com.fasterxml.jackson.databind.node.ObjectNode;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 import org.springframework.web.reactive.function.client.WebClient;
 import org.springframework.web.util.UriComponentsBuilder;
@@ -18,8 +19,8 @@ public class PlanetRemoteRepository {
 
     private final WebClient remoteClient;
 
-    public PlanetRemoteRepository() {
-        this.remoteClient = WebClient.create("https://swapi.dev/api");
+    public PlanetRemoteRepository(@Value("${swapi.baseUrl}") String baseUrl) {
+        this.remoteClient = WebClient.create(baseUrl);
     }
 
     public Flux<Planet> getPlanets(Integer page) {
